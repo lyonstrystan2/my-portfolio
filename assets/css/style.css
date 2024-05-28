@@ -25,6 +25,10 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+.IMG_Holder {
+	padding:  50px 0 100px;
+    border:  1px solid #e5ebf2;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
