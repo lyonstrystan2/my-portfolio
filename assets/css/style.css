@@ -25,6 +25,10 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+img:hover {
+    -webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+}
 .IMG_Holder {
 	padding:  50px 0 100px;
     border:  1px solid #e5ebf2;
@@ -38,7 +42,7 @@ font-family: 'Poppins', sans-serif;
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 33%;
+  flex: 10%;
   padding: 0 4px;
 }
 
