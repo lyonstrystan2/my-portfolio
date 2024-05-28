@@ -25,10 +25,6 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
-img:hover {
-    -webkit-transform:scale(1.5); /* or some other value */
-    transform:scale(1.5);
-}
 .IMG_Holder {
 	padding:  50px 0 100px;
     border:  1px solid #e5ebf2;
