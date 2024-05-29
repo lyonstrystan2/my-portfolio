@@ -308,7 +308,7 @@
 	<script>
 		let isClicked = 0;
 		let imgNum;
-		const img = document.getElementsByClassName("img");
+		const img = Object.assign({}, document.getElementsByClassName("img"));
 		function enlargeImg(y) {
 			if(isClicked == 0){
 				imgNum = y;
