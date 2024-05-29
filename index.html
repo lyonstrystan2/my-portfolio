@@ -306,6 +306,7 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
+	var isClicked = 0;
         // Get the img object using its Id
         img = document.getElementById("img1");
         // Function to increase image size
@@ -314,13 +315,16 @@
             img.style.transform = "scale(1.5)";
             // Animation effect
             img.style.transition = "transform 0.25s ease";
+	    isClicked = 1;
         }
         // Function to reset image size
 		document.body.addEventListener("click", function (evt) {
     console.dir(this);
     //note evt.target can be a nested element, not the body element, resulting in misfires
     console.log(evt.target);
-    resetImg();
+    if (isClicked > 0) {
+	    resetImg();
+    }
 });
         function resetImg() {
             // Set image size to original
