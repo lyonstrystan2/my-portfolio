@@ -145,7 +145,7 @@
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<img src="assets/images/portfolio/Portrait.jpg">
+							<img src="assets/images/portfolio/Portrait.jpg" onClick="test();">
 					</div>
 				</div>
 			</div>
@@ -161,10 +161,10 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="enlargeImg(0)" class="img">
-						<img src="assets/images/portfolio/scary.jpg" onclick="enlargeImg(1)" class="img">
-						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="enlargeImg(2)" class="img"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="enlargeImg(3)" class="img">
+						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="oneImgClick(0);allImgClick();" class="img">
+						<img src="assets/images/portfolio/scary.jpg" onclick="oneImgClick(1);allImgClick();" class="img">
+						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="oneImgClick(2);allImgClick();" class="img"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="oneImgClick(3);allImgClick();" class="img">
                                         </div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1318.jpeg" onclick="enlargeImg()" id="img1">					
@@ -306,27 +306,35 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		let isClicked = 0;
-		let imgNum;
+		let isImgEnlarged = "NO";
 		const img = Object.assign({}, document.getElementsByClassName("img"));
-		function enlargeImg(y) {
-			if(isClicked == 0){
-				imgNum = y;
+		
+		function oneImgClick(iN) {
+			if (isImgEnlarged = "NO") {
+				enlargeImg(iN);
+			} else if (isImgEnlarged = "YES") {
+				resetImg();
 			}
-			if(imgNum = y) {
-				if(isClicked == 0) {
-					img[y].style.transform = "scale(1.5)";
-					img[y].style.transition = "transform 0.25s ease";
-					isClicked = 1;
-				} else {
-					resetImg(y);
-				}
-			}
-			console.log(imgNum, isClicked, y);
+			console.log(iN, isImgEnlarged);
 		}
-		function resetImg(z) {
-			img[z].style.transform = "scale(1)";
-			img[z].style.transition = "transform 0.25s ease";
+		function allImgClick() {
+			if (isImgEnlarged = "NO") {
+				isImgEnlarged = "YES"
+			} else if (isImgEnlarged = "YES") {
+				isImgEnlarged = "NO"
+			}
+		}
+		function enlargeImg() {		
+			img[y].style.transform = "scale(1.5)";
+			img[y].style.transition = "transform 0.25s ease";
+		}
+		function resetImg() {
+			img.style.transform = "scale(1)";
+			img.style.transition = "transform 0.25s ease";
+			
+		}
+		function test() {
+			console.log(isImgEnlarged);
 		}
 	</script>
         
