@@ -161,10 +161,10 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="enlargeImg(1)" class="img">
-						<img src="assets/images/portfolio/scary.jpg" onclick="enlargeImg(2)" class="img">
-						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="enlargeImg(3)" class="img"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="enlargeImg(4)" class="img">
+						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="enlargeImg(0)" class="img">
+						<img src="assets/images/portfolio/scary.jpg" onclick="enlargeImg(1)" class="img">
+						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="enlargeImg(2)" class="img"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="enlargeImg(3)" class="img">
                                         </div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1318.jpeg" onclick="enlargeImg()" id="img1">					
@@ -308,22 +308,22 @@
 	<script>
 		let isClicked = 0;
 		const img = document.getElementsByClassName("img");
-		function enlargeImg(img) {
+		function enlargeImg(y) {
 			if(isClicked == 0) {
-				img.style.transform = "scale(1.5)";
-				img.style.transition = "transform 0.25s ease";
+				img[y].style.transform = "scale(1.5)";
+				img[y].style.transition = "transform 0.25s ease";
 				isClicked = 1;
 				if(isClicked = 1){
 					alert("Image Enlarged");
 				}
 			} else {
-				resetImg();
+				resetImg(y);
 				isClicked = 0;
 			}
 		}
-		function resetImg() {
-			img.style.transform = "scale(1)";
-			img.style.transition = "transform 0.25s ease";
+		function resetImg(z) {
+			img[z].style.transform = "scale(1)";
+			img[z].style.transition = "transform 0.25s ease";
 		}
 	</script>
         
