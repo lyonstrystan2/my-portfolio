@@ -4,19 +4,21 @@
     <head>
 	<style>
 		img {width: 100%;}
-		#fullpage {
-  display: none;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
-  background-color: black;
-}
+		.backdrop {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		.popup {
+			position: absolute;
+width: 500px;
+height: auto;
+top: 50%; // to put it in the middle
+left: 50%;
+transform: translate(-50%, -50%);
+		}
 	</style>
         <!-- meta data -->
         <meta charset="utf-8">
@@ -171,6 +173,11 @@
 		        <div class="section-heading text-center">
 			        <h2>portfolio</h2>
 		        </div>
+			<div class="backdrop">
+  <div class="popup">
+    <img src="" class="popup-image" id="holder" />
+  </div>
+</div>
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
@@ -320,26 +327,14 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var isBig = false;
-		images = document.getElementsByClassName("img");
+		let holder = document.getElementById("holder");
 		document.getElementById("img").addEventListener("click",function(e) {
 			images = document.getElementsByClassName("img");
 
                         enlargeImage.apply(null, images);
 		})
 		function enlargeImage(a) {
-			if (isBig) {
-				images[a].style.width = null;
-				images[a].style.height = null;
-				images[a].style.position = null;
-				isBig = false;
-			} else {
-			        images[a].style.height = "300%";
-				images[a].style.width = "85%";
-				images[a].style.zIndex = "9999";
-				images[a].style.position = "absolute";
-				isBig = true;
-			}
+			holder.scr = images[a].scr;
 		}
 	</script>
         
