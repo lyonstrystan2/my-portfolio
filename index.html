@@ -311,18 +311,19 @@
 		const img = document.getElementsByClassName("img");
 		function enlargeImg(y) {
 			if(isClicked == 0){
-				(imgNum = y)
+				imgNum = y;
 			}
 			if(imgNum = y) {
-			if(isClicked == 0) {
-				img[y].style.transform = "scale(1.5)";
-				img[y].style.transition = "transform 0.25s ease";
-				isClicked = 1;
-			} else {
-				resetImg(y);
-				isClicked = 0;
+				if(isClicked == 0) {
+					img[y].style.transform = "scale(1.5)";
+					img[y].style.transition = "transform 0.25s ease";
+					isClicked = 1;
+				} else {
+					resetImg(y);
+					isClicked = 0;
+				}
 			}
-			}
+			console.log(imgNum, isClicked);
 		}
 		function resetImg(z) {
 			img[z].style.transform = "scale(1)";
