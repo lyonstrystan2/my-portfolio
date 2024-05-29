@@ -323,15 +323,15 @@
 		var isBig = false;
 		document.getElementById("img").addEventListener("click",function(e) {
 			if (isBig) {
-				imgEl.style.width = null;
-				imgEl.style.height = null;
-				imgEl.style.position = null;
+				style.width = null;
+				style.height = null;
+				style.position = null;
 				isBig = false;
 			} else {
-				imgEl.style.height = "300%";
-				imgEl.style.width = "85%";
-				imgEl.style.zIndex = "9999";
-				imgEl.style.position = "absolute";
+			        style.height = "300%";
+				style.width = "85%";
+				style.zIndex = "9999";
+				style.position = "absolute";
 				isBig = true;
 			}
 		})
