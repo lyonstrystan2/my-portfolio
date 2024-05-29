@@ -320,7 +320,7 @@
 			if (isImgEnlarged = "NO") {
 				enlargeImg(iN);
 			} else if (isImgEnlarged = "YES") {
-				resetImg();
+				resetImg(iN);
 			}
 			console.log(iN, isImgEnlarged, "oneimgclicked");
 		}
@@ -329,9 +329,9 @@
 			img[y].style.transform = "scale(1.5)";
 			img[y].style.transition = "transform 0.25s ease";
 		}
-		function resetImg() {
-			img.style.transform = "scale(1)";
-			img.style.transition = "transform 0.25s ease";
+		function resetImg(y) {
+			img[y].style.transform = "scale(1)";
+			img[y].style.transition = "transform 0.25s ease";
 			
 		}
 		function test() {
