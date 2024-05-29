@@ -124,7 +124,7 @@ html,body{
 --------------------------------------*/
 .top-area {
     position: relative;
-    z-index: 9999;
+    z-index: 9900;
 }
 @media (min-width: 1024px){}
 nav.navbar.bootsnav.no-background {
