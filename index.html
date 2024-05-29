@@ -327,11 +327,15 @@
 				imgEl.style.width = null;
 				imgEl.style.height = null;
 				imgEl.style.position = null;
+				imgEl.style.marginLeft = null;
+				imgEl.style.marginRight = null;
 				isBig = false;
 			} else {
 				imgEl.style.height = "70vh";
 				imgEl.style.width = "100%";
-				imgEl.style.position = "relative";
+				imgEl.style.position = "fixed";
+				imgEl.style.marginLeft = "auto";
+				imgEl.style.marginRight = "auto";
 				isBig = true;
 			}
 		})
