@@ -174,10 +174,10 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" id="img">
-						<img src="assets/images/portfolio/scary.jpg" id="img">
-						<img src="assets/images/portfolio/IMG_1234.JPG" id="img"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg" id="img">
+						<img src="assets/images/portfolio/IMG_1231.jpg" class="img" id="img">
+						<img src="assets/images/portfolio/scary.jpg" class="img" id="img">
+						<img src="assets/images/portfolio/IMG_1234.JPG" class="img" id="img"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" class="img" id="img">
                                         </div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1318.jpeg" id="img1">					
@@ -321,20 +321,26 @@
         <script src="assets/js/custom.js"></script>
 	<script>
 		var isBig = false;
+		images = document.getElementsByClassName("img');
 		document.getElementById("img").addEventListener("click",function(e) {
+			images = document.getElementsByClassName("img');
+
+                        enlargeImage.apply(null, images);
+		})
+		function enlargeImage(a) {
 			if (isBig) {
-				img.style.width = null;
-				img.style.height = null;
-				img.style.position = null;
+				images[a].style.width = null;
+				images[a].style.height = null;
+				images[a].style.position = null;
 				isBig = false;
 			} else {
-			        img.style.height = "300%";
-				img.style.width = "85%";
-				img.style.zIndex = "9999";
-				img.style.position = "absolute";
+			        images[a].style.height = "300%";
+				images[a].style.width = "85%";
+				images[a].style.zIndex = "9999";
+				images[a].style.position = "absolute";
 				isBig = true;
 			}
-		})
+		}
 	</script>
         
     </body>	
