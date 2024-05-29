@@ -161,22 +161,22 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="enlargeImg()" id="img1">
-						<img src="assets/images/portfolio/scary.jpg">
-						<img src="assets/images/portfolio/IMG_1234.JPG"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg">
+						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="enlargeImg(1)" class="img">
+						<img src="assets/images/portfolio/scary.jpg" onclick="enlargeImg(2)" class="img">
+						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="enlargeImg(3)" class="img"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="enlargeImg(4)" class="img">
                                         </div>
 					<div class="column">
-						<img src="assets/images/portfolio/IMG_1318.jpeg">					
-						<img src="assets/images/portfolio/IMG_1249.jpg">							
-						<img src="assets/images/portfolio/girl.jpg">						
-						<img src="assets/images/portfolio/IMG_1123.jpg">					
+						<img src="assets/images/portfolio/IMG_1318.jpeg" onclick="enlargeImg()" id="img1">					
+						<img src="assets/images/portfolio/IMG_1249.jpg" onclick="enlargeImg()" id="img1">							
+						<img src="assets/images/portfolio/girl.jpg" onclick="enlargeImg()" id="img1">						
+						<img src="assets/images/portfolio/IMG_1123.jpg" onclick="enlargeImg()" id="img1">					
 					</div>
 					<div class="column">
-						<img src="assets/images/portfolio/IMG_1240.JPG">
-						<img src="assets/images/portfolio/dude.jpg">					
-						<img src="assets/images/portfolio/Portrait.jpg">
-						<img src="assets/images/portfolio/IMG_1246.jpg">
+						<img src="assets/images/portfolio/IMG_1240.JPG" onclick="enlargeImg()" id="img1">
+						<img src="assets/images/portfolio/dude.jpg" onclick="enlargeImg()" id="img1">					
+						<img src="assets/images/portfolio/Portrait.jpg" onclick="enlargeImg()" id="img1">
+						<img src="assets/images/portfolio/IMG_1246.jpg" onclick="enlargeImg()" id="img1">
 						
 							
                                         </div>
@@ -307,8 +307,8 @@
         <script src="assets/js/custom.js"></script>
 	<script>
 		let isClicked = 0;
-		img = document.getElementById("img1");
-		function enlargeImg() {
+		const img = document.getElementsByClassName("img");
+		function enlargeImg(img) {
 			if(isClicked == 0) {
 				img.style.transform = "scale(1.5)";
 				img.style.transition = "transform 0.25s ease";
