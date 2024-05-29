@@ -167,10 +167,10 @@
 						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="oneImgClick(3); allImgClick()" class="img">
                                         </div>
 					<div class="column">
-						<img src="assets/images/portfolio/IMG_1318.jpeg" onclick="enlargeImg()" id="img1">					
-						<img src="assets/images/portfolio/IMG_1249.jpg" onclick="enlargeImg()" id="img1">							
-						<img src="assets/images/portfolio/girl.jpg" onclick="enlargeImg()" id="img1">						
-						<img src="assets/images/portfolio/IMG_1123.jpg" onclick="enlargeImg()" id="img1">					
+						<img src="assets/images/portfolio/IMG_1318.jpeg" id="img1">					
+						<img src="assets/images/portfolio/IMG_1249.jpg" id="img1">							
+						<img src="assets/images/portfolio/girl.jpg" id="img1">						
+						<img src="assets/images/portfolio/IMG_1123.jpg" id="img1">					
 					</div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1240.JPG" onclick="enlargeImg()" id="img1">
@@ -307,14 +307,14 @@
         <script src="assets/js/custom.js"></script>
 	<script>
 		var isImgEnlarged;
-		const img = Object.assign({}, document.getElementsByClassName("img"));
+		const img = document.getElementsByClassName("img");
 		
 		function oneImgClick(iN) {
 			console.log(iN, isImgEnlarged, "oneimgclicked");
-			if (isImgEnlarged = "YES") {
+			if (isImgEnlarged = 1) {
 				resetImg(iN);
 			}
-			if (isImgEnlarged = "NO") {
+			if (isImgEnlarged = 2) {
 				enlargeImg(iN);
 			} 
 			
@@ -331,8 +331,8 @@
 			
 		}
 		function allImgClick() {
-			if (isImgEnlarged = "NO") {
-				isImgEnlarged = "YES";
+			if (isImgEnlarged = 1) {
+				isImgEnlarged = 2;
 			}
 			console.log("allimgclicked", isImgEnlarged);
 		}
