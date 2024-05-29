@@ -320,9 +320,8 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var imgEl = document.getElementsByClassName("img");
 		var isBig = false;
-		imgEl.addEventListener("click", function(imgEl) {
+		document.getElementById("img").addEventListener("click",function(e) {
 			if (isBig) {
 				imgEl.style.width = null;
 				imgEl.style.height = null;
