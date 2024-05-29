@@ -174,10 +174,10 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" id="img">
-						<img src="assets/images/portfolio/scary.jpg" id="img">
-						<img src="assets/images/portfolio/IMG_1234.JPG" id="img"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg" id="img">
+						<img src="assets/images/portfolio/IMG_1231.jpg" class="img">
+						<img src="assets/images/portfolio/scary.jpg" class="img">
+						<img src="assets/images/portfolio/IMG_1234.JPG" class="img"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" class="img">
                                         </div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1318.jpeg" id="img1">					
@@ -320,7 +320,7 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var imgEl = document.getElementById("img");
+		var imgEl = document.getElementByClass("img");
 		var isBig = false;
 		imgEl.addEventListener("click", function() {
 			if (isBig) {
