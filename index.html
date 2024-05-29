@@ -322,7 +322,7 @@
 	<script>
 		var imgEl = document.getElementByClass("img");
 		var isBig = false;
-		imgEl.addEventListener("click", function() {
+		imgEl.addEventListener("click", function(imgEl) {
 			if (isBig) {
 				imgEl.style.width = null;
 				imgEl.style.height = null;
