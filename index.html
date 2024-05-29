@@ -307,17 +307,21 @@
         <script src="assets/js/custom.js"></script>
 	<script>
 		var isImgEnlarged = 1;
+		var temp;
 		const img = document.getElementsByClassName("img");
 		function allImgClick(isImgEnlarged) {
 			if (isImgEnlarged == 1) {
-				isImgEnarged = 2;
+				temp = 2;
 				console.log("ImgWasNotEnlarged");
 			} else if (isImgEnlarged == 2) {
-				isImgEnarged = 1;
+				temp = 1;
 				console.log("ImgWasEnlarged");
 			}
 			console.log(isImgEnlarged);
+			shiftValues();
 		}
+		function shiftValues() {
+			isImgEnlarged = temp;
 		function test() {
 			console.log(isImgEnlarged);
 		}
