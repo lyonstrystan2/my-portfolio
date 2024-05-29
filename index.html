@@ -306,32 +306,26 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-	var isClicked = 0;
-        // Get the img object using its Id
-        img = document.getElementById("img1");
-        // Function to increase image size
-        function enlargeImg() {
-            // Set image size to 1.5 times original
-            img.style.transform = "scale(1.5)";
-            // Animation effect
-            img.style.transition = "transform 0.25s ease";
-	    isClicked = 1;
-        }
-        // Function to reset image size
-		document.body.addEventListener("click", function (evt) {
-    console.dir(this);
-    //note evt.target can be a nested element, not the body element, resulting in misfires
-    console.log(evt.target);
-    if (isClicked > 0) {
-	    resetImg();
-    }
-});
-        function resetImg() {
-            // Set image size to original
-            img.style.transform = "scale(1)";
-            img.style.transition = "transform 0.25s ease";
-        }
-    </script>
+		let isClicked = 0;
+		img = document.getElementById("img1");
+		function enlargeImg() {
+			if(isClicked == 0) {
+				img.style.transform = "scale(1.5)";
+				img.style.transition = "transform 0.25s ease";
+				isClicked = 1;
+				if(isClicked = 1){
+					alert("Image Enlarged");
+				}
+			} else {
+				resetImg();
+				isClicked = 0;
+			}
+		}
+		function resetImg() {
+			img.style.transform = "scale(1)";
+			img.style.transition = "transform 0.25s ease";
+		}
+	</script>
         
     </body>	
 </html>
