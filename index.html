@@ -306,16 +306,19 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var isImgEnlarged = "NO";
+		var isImgEnlarged;
 		const img = Object.assign({}, document.getElementsByClassName("img"));
 		
 		function oneImgClick(iN) {
-			if (isImgEnlarged = "NO") {
-				enlargeImg(iN);
-			} else if (isImgEnlarged = "YES") {
+			console.log(iN, isImgEnlarged, "oneimgclicked");
+			if (isImgEnlarged = "YES") {
 				resetImg(iN);
 			}
-			console.log(iN, isImgEnlarged, "oneimgclicked");
+			if (isImgEnlarged = "NO") {
+				enlargeImg(iN);
+			} 
+			
+			
 		}
 		
 		function enlargeImg(y) {		
@@ -331,7 +334,7 @@
 			if (isImgEnlarged = "NO") {
 				isImgEnlarged = "YES";
 			}
-			console.log("allimgclicked");
+			console.log("allimgclicked", isImgEnlarged);
 		}
 		function test() {
 			console.log(isImgEnlarged);
