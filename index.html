@@ -310,12 +310,11 @@
 		var isBig = false;
 		imgEl.addEventListener("click", function() {
 			if (isBig) {
-				imgEl.style.width = "30px";
-				imgEl.style.height = "30px";
+				imgEl.style.width = null;
+				imgEl.style.height = null;
 				isBig = false;
 			} else {
-				imgEl.style.width = "100px";
-				imgEl.style.height = "100px";
+				imgEl.style.height = "80%";
 				isBig = true;
 			}
 		})
