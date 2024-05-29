@@ -308,12 +308,7 @@
 	<script>
 		var isImgEnlarged = "NO";
 		const img = Object.assign({}, document.getElementsByClassName("img"));
-		function allImgClick() {
-			if (isImgEnlarged = "NO") {
-				isImgEnlarged = "YES";
-			}
-			console.log("allimgclicked");
-		}
+		
 		function oneImgClick(iN) {
 			if (isImgEnlarged = "NO") {
 				enlargeImg(iN);
@@ -331,6 +326,12 @@
 			img[y].style.transform = "scale(1)";
 			img[y].style.transition = "transform 0.25s ease";
 			
+		}
+		function allImgClick() {
+			if (isImgEnlarged = "NO") {
+				isImgEnlarged = "YES";
+			}
+			console.log("allimgclicked");
 		}
 		function test() {
 			console.log(isImgEnlarged);
