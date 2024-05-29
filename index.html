@@ -161,10 +161,10 @@
 			<div class="IMG_Holder">
 		                <div class="row">
                                         <div class="column">
-						<img src="assets/images/portfolio/IMG_1231.jpg" onclick="allImgClick()" class="img">
-						<img src="assets/images/portfolio/scary.jpg" onclick="allImgClick()" class="img">
-						<img src="assets/images/portfolio/IMG_1234.JPG" onclick="allImgClick()" class="img"> 
-						<img src="assets/images/portfolio/IMG_1319.jpeg" onclick="allImgClick()" class="img">
+						<img src="assets/images/portfolio/IMG_1231.jpg" id="img0">
+						<img src="assets/images/portfolio/scary.jpg" id="img1">
+						<img src="assets/images/portfolio/IMG_1234.JPG" id="img2"> 
+						<img src="assets/images/portfolio/IMG_1319.jpeg" id="img3">
                                         </div>
 					<div class="column">
 						<img src="assets/images/portfolio/IMG_1318.jpeg" id="img1">					
@@ -306,26 +306,19 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var isImgEnlarged = 1;
-		var temp;
-		const img = document.getElementsByClassName("img");
-		function allImgClick() {
-			if (isImgEnlarged == 1) {
-				temp = 2;
-				console.log("ImgWasNotEnlarged");
-			} else if (isImgEnlarged == 2) {
-				temp = 1;
-				console.log("ImgWasEnlarged");
+		var imgEl = document.getElementById("img0");
+		var isBig = false;
+		imgEl.addEventListener("click", function() {
+			if (isBig) {
+				imgEl.style.width = "30px";
+				imgEl.style.height = "30px";
+				isBig = false;
+			} else {
+				imgEl.style.width = "100px";
+				imgEl.style.height = "100px";
+				isBig = true;
 			}
-			console.log(isImgEnlarged);
-			shiftValues();
-		}
-		function shiftValues() {
-			isImgEnlarged = temp;
-		}
-		function test() {
-			console.log(isImgEnlarged);
-		}
+		})
 	</script>
         
     </body>	
