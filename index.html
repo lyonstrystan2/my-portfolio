@@ -308,33 +308,15 @@
 	<script>
 		var isImgEnlarged;
 		const img = document.getElementsByClassName("img");
-		
-		function oneImgClick(iN) {
-			console.log(iN, isImgEnlarged, "oneimgclicked");
-			if (isImgEnlarged = 1) {
-				resetImg(iN);
+		function allImgClick(isImgEnlarged) {
+			if (isImgEnlarged == 1) {
+				isImgEnarged = 2;
+				console.log("ImgWasNotEnlarged");
+			} else if (isImgEnlarged == 2) {
+				isImgEnarged = 1;
+				console.log("ImgWasEnlarged");
 			}
-			if (isImgEnlarged = 2) {
-				enlargeImg(iN);
-			} 
-			
-			
-		}
-		
-		function enlargeImg(y) {		
-			img[y].style.transform = "scale(1.5)";
-			img[y].style.transition = "transform 0.25s ease";
-		}
-		function resetImg(y) {
-			img[y].style.transform = "scale(1)";
-			img[y].style.transition = "transform 0.25s ease";
-			
-		}
-		function allImgClick() {
-			if (isImgEnlarged = 1) {
-				isImgEnlarged = 2;
-			}
-			console.log("allimgclicked", isImgEnlarged);
+			console.log(isImgEnlarged);
 		}
 		function test() {
 			console.log(isImgEnlarged);
