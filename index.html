@@ -316,6 +316,12 @@
             img.style.transition = "transform 0.25s ease";
         }
         // Function to reset image size
+		document.body.addEventListener("click", function (evt) {
+    console.dir(this);
+    //note evt.target can be a nested element, not the body element, resulting in misfires
+    console.log(evt.target);
+    resetImg();
+});
         function resetImg() {
             // Set image size to original
             img.style.transform = "scale(1)";
