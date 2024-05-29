@@ -4,6 +4,19 @@
     <head>
 	<style>
 		img {width: 100%;}
+		#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
 	</style>
         <!-- meta data -->
         <meta charset="utf-8">
@@ -306,20 +319,16 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 	<script>
-		var imgEl = document.getElementById("img");
-		var isBig = false;
-		imgEl.addEventListener("click", function() {
-			if (isBig) {
-				imgEl.style.width = null;
-				imgEl.style.height = null;
-				imgEl.style.position = null;
-				isBig = false;
-			} else {
-				imgEl.style.height = "300px";
-				imgEl.style.display = "block";
-				isBig = true;
-			}
-		})
+		function getPics() {} //just for this demo
+const imgs = document.querySelectorAll('.column img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+  img.addEventListener('click', function() {
+    fullPage.style.backgroundImage = 'url(' + img.src + ')';
+    fullPage.style.display = 'block';
+  });
+});
 	</script>
         
     </body>	
