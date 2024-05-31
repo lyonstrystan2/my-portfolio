@@ -4,7 +4,6 @@
     <head>
 	<style>
 	#myImg {
-		height: 50%;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -16,7 +15,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 9999; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -31,7 +30,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+	height: 93%;
+  width: auto;
   max-width: 700px;
 }
 
