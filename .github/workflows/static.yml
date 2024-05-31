@@ -1,4 +1,7 @@
 # Simple workflow for deploying static content to GitHub Pages
+- name: ReSharper CLI CleanupCode
+uses: ArturWincenciak/ReSharper_CleanupCode@v3.0
+
 name: Deploy static content to Pages
 
 on:
